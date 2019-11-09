@@ -2,7 +2,7 @@ from variables import *
 
 start_time = time.time()
 
-print("STARTED\n0: Going to test website")
+print("TEST STARTED: Checkout\nSTART: Going to test website")
 driver.get(website)
 
 print("1: Clicking add to cart CTA")
@@ -38,15 +38,19 @@ driver.find_element_by_xpath(place_order).click()
 print("10: Order confirmation page - going back to order history")
 driver.find_element_by_xpath(order_confirmation).click()
 if driver.current_url == order_history:
-    print ("Order placed successfully")
+    print("Order placed successfully")
+
+    print("11: Logging out")
+    driver.find_element_by_xpath(logout_btn).click()
+
+    print("TEST FINISHED SUCCESSFULLY")
+    driver.close()
+
+
 else:
     print("Error occured")
 
-print("11: Logging out")
-driver.find_element_by_xpath(logout_btn).click()
 
-print("12: Closing Chrome")
-driver.close()
 
 end_time = time.time()
 print("FINISHED\nTotal execution time: {:0.2f} seconds".format(end_time - start_time))

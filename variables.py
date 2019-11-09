@@ -1,3 +1,5 @@
+import random
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.remote.webelement import WebElement
@@ -9,7 +11,7 @@ driver = webdriver.Chrome()
 
 website = "http://automationpractice.com/index.php"
 
-## Login test
+## Login
 
 login_email = "emailer5k+selenium@gmail.com"
 login_password = "12345"
@@ -21,6 +23,20 @@ login_submit = '//*[@id="SubmitLogin"]'
 logout_btn = '//*[@id="header"]/div[2]/div/div/nav/div[2]/a'
 login_page = 'http://automationpractice.com/index.php?controller=authentication&back=my-account'
 account_page = 'http://automationpractice.com/index.php?controller=my-account'
+
+## Create account
+
+prefix_create = random.randint(0, 9999)
+new_account_email = str(prefix_create) + '@testmail.com'
+
+create_acc_mail = '//*[@id="email_create"]'
+create_acc_submit = '//*[@id="SubmitCreate"]'
+
+new_acc_radio = '//*[@id="id_gender1"]'
+new_acc_first_name = '//*[@id="customer_firstname"]'
+new_acc_last_name = '//*[@id="customer_lastname"]'
+new_acc_password = '//*[@id="passwd"]'
+new_acc_register = '//*[@id="submitAccount"]'
 
 ## Add new address
 

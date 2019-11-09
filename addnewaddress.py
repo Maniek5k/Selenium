@@ -82,9 +82,10 @@ print("20: Logging out")
 driver.find_element_by_xpath(logout_btn).click()
 
 print("21: Checking correct log-out")
-if driver.current_url == account_page:
-    print ("Logout was successful")
+if driver.current_url != account_page:
+    print ("SUCCESS: Logout was successful")
     driver.close()
+    print("TEST FINISHED SUCCESSFULLY")
 else:
     print("Error occured - not logged out")
 

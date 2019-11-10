@@ -1,5 +1,6 @@
 import random
 import time
+from termcolor import colored
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -39,6 +40,23 @@ newsletter_failed = 'alert-danger'
 
 success_message = "Newsletter : You have successfully subscribed to this newsletter."
 failed_message = "Newsletter : This email address is already registered."
+
+## Add product to wishlist
+
+wishlist_login = "emailer5k+wishlist@gmail.com"
+wishlist_password = "12345"
+
+wishlist_product = "http://automationpractice.com/index.php?id_product=2&controller=product"
+wishlist_my_acc = "http://automationpractice.com/index.php?fc=module&module=blockwishlist&controller=mywishlist"
+
+wishlist_prod_name = '//*[@id="center_column"]/div/div/div[3]/h1'
+wishlist_add = '//*[@id="wishlist_button"]'
+
+wishlist_open = '/html/body/div/div[2]/div/div[3]/div[2]/div/div[1]/table/tbody/tr/td[1]/a'
+wishlist_added_click = '//*[@id="wlp_2_7"]/div/div[1]/div/a/img'
+
+wishlist_remove = '/html/body/div/div[2]/div/div[3]/div[2]/div/div[1]/table/tbody/tr/td[6]/a/i'
+
 ## Create account
 
 new_account_email = str(prefix_create) + '@testmail.com'

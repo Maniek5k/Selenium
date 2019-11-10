@@ -1,10 +1,10 @@
 import random
+import time
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.remote.webelement import WebElement
-import time
-
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.select import Select
 
 driver = webdriver.Chrome()
@@ -24,9 +24,23 @@ logout_btn = '//*[@id="header"]/div[2]/div/div/nav/div[2]/a'
 login_page = 'http://automationpractice.com/index.php?controller=authentication&back=my-account'
 account_page = 'http://automationpractice.com/index.php?controller=my-account'
 
-## Create account
+## Subscribe to newsletter
 
 prefix_create = random.randint(0, 9999)
+newsletter_mail = str(prefix_create) + '@testmail.com'
+
+newsletter_input = '#newsletter-input'
+newsletter_submit = '//*[@id="newsletter_block_left"]/div/form/div/button'
+newsletter_resubmit = '//*[@id="newsletter_block_left"]/div/form/div/button'
+
+
+newsletter_success = 'alert-success'
+newsletter_failed = 'alert-danger'
+
+success_message = "Newsletter : You have successfully subscribed to this newsletter."
+failed_message = "Newsletter : This email address is already registered."
+## Create account
+
 new_account_email = str(prefix_create) + '@testmail.com'
 
 create_acc_mail = '//*[@id="email_create"]'

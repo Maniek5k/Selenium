@@ -2,7 +2,7 @@ from variables import *
 
 start_time = time.time()
 
-print("TEST STARTED: Login \nStart: Go to test website")
+print(colored("TEST STARTED: Login & logout \nStart: Go to test website", "green", attrs=['bold']))
 driver.get(website)
 
 print("1: Click login button")
@@ -17,7 +17,7 @@ driver.find_element_by_xpath(login_submit).click()
 
 print("4: Checking for current URL")
 if driver.current_url == account_page:
-    print("Login was successful")
+    print(colored("Login was successful", "blue"))
 else:
     print("Error occurred")
 
@@ -26,11 +26,11 @@ driver.find_element_by_xpath(logout_btn).click()
 
 print("6: Checking correct log-out")
 if driver.current_url == login_page:
-    print("SUCCESS: Logout was successful")
+    print(colored("SUCCESS: Logout was successful", "blue"))
     driver.close()
-    print("TEST FINISHED SUCCESSFULLY")
+    print(colored("TEST FINISHED SUCCESSFULLY", "green", attrs=['bold']))
 else:
     print("Error occurred")
 
 end_time = time.time()
-print("Total execution time: {:0.2f} seconds".format(end_time - start_time))
+print(colored("Total execution time: {:0.2f} seconds".format(end_time - start_time), "cyan"))

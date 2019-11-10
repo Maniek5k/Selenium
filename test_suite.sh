@@ -6,10 +6,17 @@ alias python="python3.7"
 
 start=$(date +%s)
 
-python tests/newslettersubscribe.py && python tests/login.py && python tests/addtowishlist.py &&  python tests/createaccount.py && python tests/addnewaddress.py && python tests/checkout.py
+python tests/newslettersubscribe.py &&
+python tests/login.py &&
+python tests/addtowishlist.py &&
+python tests/createaccount.py &&
+python tests/addnewaddress.py &&
+python tests/addtobasket.py &&
+python tests/checkout-wire.py &&
+python tests/checkout-check.py
 
 end=$(date +%s)
 
 runtime=$(python -c "print '%u:%02u' % ((${end} - ${start})/60, (${end} - ${start})%60)")
 
-echo "TEST SUITE executed in $runtime"
+echo -e "\e[32mTEST SUITE executed in \e[1m$runtime"

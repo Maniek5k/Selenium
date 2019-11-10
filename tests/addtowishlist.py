@@ -2,7 +2,7 @@ from variables import *
 
 start_time = time.time()
 
-print(colored("TEST STARTED: Adding product to wishlist \nStart: Go to test website", "green"))
+print(colored("TEST STARTED: Adding product to wishlist \nStart: Go to test website", "green", attrs=['bold']))
 driver.get(website)
 
 print("1: Click login button")
@@ -55,7 +55,7 @@ driver.find_element_by_xpath(wishlist_remove).click()
 driver.implicitly_wait(1)
 driver.switch_to.alert.accept()
 
-print(colored("TEST FINISHED SUCCESSFULLY", "green"))
+print(colored("TEST FINISHED SUCCESSFULLY", "green", attrs=['bold']))
 driver.close()
 
 end_time = time.time()

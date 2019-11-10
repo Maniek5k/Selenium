@@ -2,7 +2,7 @@ from variables import *
 
 start_time = time.time()
 
-print("TEST: Add new address\nStart: Go to test website")
+print(colored("TEST STARTED: Add new address \nStart: Go to test website", "green", attrs=['bold']))
 driver.get(website)
 
 print("1: Click login button")
@@ -17,7 +17,7 @@ driver.find_element_by_xpath(login_submit).click()
 
 print("4: Checking for current URL")
 if driver.current_url == account_page:
-    print("4a: Login was successful")
+    print(colored("4a: Login was successful", "blue"))
 else:
     print("Error occured")
 
@@ -27,7 +27,7 @@ driver.get(address_page)
 print("5a: Checking if there are no addresses added to account")
 address_removed = driver.find_element_by_xpath(no_addresses)
 if address_removed.is_displayed():
-    print("OK - no existing addresses found")
+    print(colored("OK - no existing addresses found", "blue"))
 else:
     print("ERROR - there is anoether address, test terminated")
 
@@ -74,7 +74,7 @@ driver.switch_to.alert.accept()
 print("19: Checking if address was successfully deleted")
 address_removed = driver.find_element_by_xpath(no_addresses)
 if address_removed.is_displayed():
-    print("19a: Address was removed")
+    print(colored("19a: Address was removed", "blue"))
 else:
     print("ERROR - Address not removed properly")
 
@@ -83,11 +83,11 @@ driver.find_element_by_xpath(logout_btn).click()
 
 print("21: Checking correct log-out")
 if driver.current_url != account_page:
-    print ("SUCCESS: Logout was successful")
+    print (colored("SUCCESS: Logout was successful", "blue"))
     driver.close()
-    print("TEST FINISHED SUCCESSFULLY")
+    print(colored("TEST FINISHED SUCCESSFULLY", "green", attrs=['bold']))
 else:
     print("Error occured - not logged out")
 
 end_time = time.time()
-print("Total execution time: {:0.2f} seconds".format(end_time - start_time))
+print(colored("Total execution time: {:0.2f} seconds".format(end_time - start_time), "cyan"))

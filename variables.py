@@ -10,6 +10,8 @@ from selenium.webdriver.support.select import Select
 
 driver = webdriver.Chrome()
 
+driver.set_page_load_timeout(30)
+
 website = "http://automationpractice.com/index.php"
 
 ## Login
@@ -93,6 +95,18 @@ address_delete = '//*[@id="center_column"]/div[1]/div/div/ul/li[9]/a[2]'
 address_block = '//*[@id="center_column"]/div[1]/div/div/ul/li[1]/h3'
 no_addresses = '//*[@id="center_column"]/p[2]'
 
+## Add to basket test
+
+basket_email = 'emailer5k+addtobasket@gmail.com'
+basket_password = '12345'
+
+basket_product_page = "http://automationpractice.com/index.php?id_product=3&controller=product"
+
+basket_name = '//*[@id="center_column"]/div/div/div[3]/h1'
+basket_added_product_name = '/html/body/div/div[2]/div/div[3]/div/div[2]/table/tbody/tr/td[2]/p/a'
+
+basket_add = '//*[@id="add_to_cart"]/button'
+basket_remove = '/html/body/div/div[2]/div/div[3]/div/div[2]/table/tbody/tr/td[7]/div/a'
 
 ## Checkout test
 
@@ -107,6 +121,7 @@ proceed_2 = '//*[@id="center_column"]/form/p/button'
 checkout_checkbox = '//*[@id="cgv"]'
 go_to_payment = '//*[@id="form"]/p/button'
 pay_by_wire = '//*[@id="HOOK_PAYMENT"]/div[1]/div/p/a'
+pay_by_check = '//*[@id="HOOK_PAYMENT"]/div[2]/div/p/a'
 place_order = '//*[@id="cart_navigation"]/button'
 order_confirmation = '//*[@id="center_column"]/p/a'
 order_history = "http://automationpractice.com/index.php?controller=history"

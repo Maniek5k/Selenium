@@ -2,7 +2,7 @@ from variables import *
 
 start_time = time.time()
 
-print("TEST STARTED: Checkout\nSTART: Going to test website")
+print(colored("TEST STARTED: Checkout - pay by check\nStart: Go to test website", "green", attrs=['bold']))
 driver.get(website)
 
 print("1: Clicking add to cart CTA")
@@ -30,7 +30,7 @@ print("7: Proceeding to payment")
 driver.find_element_by_xpath(go_to_payment).click()
 
 print("8: Choosing Pay By Wire option")
-driver.find_element_by_xpath(pay_by_wire).click()
+driver.find_element_by_xpath(pay_by_check).click()
 
 print("9: Placing order")
 driver.find_element_by_xpath(place_order).click()
@@ -38,19 +38,15 @@ driver.find_element_by_xpath(place_order).click()
 print("10: Order confirmation page - going back to order history")
 driver.find_element_by_xpath(order_confirmation).click()
 if driver.current_url == order_history:
-    print("Order placed successfully")
+    print(colored("Order placed successfully", "blue"))
 
     print("11: Logging out")
     driver.find_element_by_xpath(logout_btn).click()
 
-    print("TEST FINISHED SUCCESSFULLY")
+    print(colored("TEST FINISHED SUCCESSFULLY", "green", attrs=['bold']))
     driver.close()
-
-
 else:
     print("Error occured")
 
-
-
 end_time = time.time()
-print("FINISHED\nTotal execution time: {:0.2f} seconds".format(end_time - start_time))
+print(colored("Total execution time: {:0.2f} seconds".format(end_time - start_time), "cyan"))

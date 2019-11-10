@@ -2,7 +2,7 @@ from variables import *
 
 start_time = time.time()
 driver.implicitly_wait(2)
-print("TEST STARTED: Create new account\nStart: Go to test website")
+print(colored("TEST STARTED: Create new account \nStart: Go to test website", "green", attrs=['bold']))
 driver.get(website)
 
 print("1: Click sign in button")
@@ -61,7 +61,7 @@ driver.find_element_by_xpath(new_acc_register).click()
 
 print("CHECK: Checking for current URL")
 if driver.current_url == account_page:
-    print("Account created successfully")
+    print(colored("Account created successfully", "blue"))
 else:
     print("Error occurred")
 
@@ -73,14 +73,14 @@ driver.find_element_by_xpath(login_mail).send_keys(new_account_email)
 driver.find_element_by_xpath(login_pwd).send_keys(login_password)
 driver.find_element_by_xpath(login_submit).click()
 
-print("CHECK: Checking correct logging in")
+print(colored("CHECK: Checking correct logging in", "blue"))
 if driver.current_url == account_page:
-    print("SUCCESS: Login was successful")
+    print(colored("SUCCESS: Login was successful, logging out", "blue"))
     driver.find_element_by_xpath(logout_btn).click()
-    print("TEST FINISHED SUCCESSFULLY")
+    print(colored("TEST FINISHED SUCCESSFULLY", "green", attrs=['bold']))
     driver.close()
 else:
     print("ERROR occured")
 
 end_time = time.time()
-print("Total execution time: {:0.2f} seconds".format(end_time - start_time))
+print(colored("Total execution time: {:0.2f} seconds".format(end_time - start_time), "cyan"))

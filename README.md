@@ -9,6 +9,8 @@ I'm testing E-commerce shop: http://automationpractice.com/index.php
 At current state following tests are available:
 
 - Subscribe to newsletter
+- Forgotten password
+- Contact Us form
 - Login
 - Add product to wishlist
 - Create new account

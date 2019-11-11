@@ -27,6 +27,14 @@ logout_btn = '//*[@id="header"]/div[2]/div/div/nav/div[2]/a'
 login_page = 'http://automationpractice.com/index.php?controller=authentication&back=my-account'
 account_page = 'http://automationpractice.com/index.php?controller=my-account'
 
+## Recover password
+
+recover_password = '//*[@id="login_form"]/div/p[1]/a'
+recover_email = '//*[@id="email"]'
+recover_confirm = '//*[@id="form_forgotpassword"]/fieldset/p/button'
+recover_success = '//*[@id="center_column"]/div/p'
+recover_message = "A confirmation email has been sent to your address: emailer5k+selenium@gmail.com"
+
 ## Subscribe to newsletter
 
 prefix_create = random.randint(0, 9999)

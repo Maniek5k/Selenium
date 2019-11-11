@@ -2,7 +2,7 @@ from variables import *
 
 start_time = time.time()
 
-print(colored("TEST STARTED: Login & logout \nStart: Go to test website", "green", attrs=['bold']))
+print(colored("TEST STARTED: Recover a forgotter password \nStart: Go to test website", "green", attrs=['bold']))
 driver.get(website)
 
 print("1: Go to login page - clicking button")
@@ -20,7 +20,7 @@ driver.find_element_by_xpath(recover_confirm).click()
 print("CHECK: Checking for correct success message")
 password_success = driver.find_element_by_xpath(recover_success).text
 
-if password_success == recover_message:
+if password_success == recover_success_text:
     print(colored("SUCCESS: Password reset email was correctly sent", "blue"))
     driver.close()
     print(colored("TEST FINISHED SUCCESSFULLY", "green", attrs=['bold']))

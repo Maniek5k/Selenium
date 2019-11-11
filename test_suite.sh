@@ -7,6 +7,8 @@ alias python="python3.7"
 start=$(date +%s)
 
 python tests/newslettersubscribe.py &&
+python tests/forgotpassword.py &&
+python tests/contactus.py &&
 python tests/login.py &&
 python tests/addtowishlist.py &&
 python tests/createaccount.py &&

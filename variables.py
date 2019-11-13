@@ -12,12 +12,18 @@ driver = webdriver.Chrome()
 
 driver.set_page_load_timeout(30)
 
+## Pages
+
 website = "http://automationpractice.com/index.php"
-
-## Login
-
 login_page = 'http://automationpractice.com/index.php?controller=authentication&back=my-account'
 account_page = 'http://automationpractice.com/index.php?controller=my-account'
+address_page = 'http://automationpractice.com/index.php?controller=addresses'
+wishlist_product = "http://automationpractice.com/index.php?id_product=2&controller=product"
+wishlist_my_acc = "http://automationpractice.com/index.php?fc=module&module=blockwishlist&controller=mywishlist"
+order_history = "http://automationpractice.com/index.php?controller=history"
+basket_product_page = "http://automationpractice.com/index.php?id_product=3&controller=product"
+
+## Login
 
 login_email = "emailer5k+selenium@gmail.com"
 login_password = "12345"
@@ -68,9 +74,6 @@ failed_message = "Newsletter : This email address is already registered."
 
 ## Add product to wishlist
 
-wishlist_product = "http://automationpractice.com/index.php?id_product=2&controller=product"
-wishlist_my_acc = "http://automationpractice.com/index.php?fc=module&module=blockwishlist&controller=mywishlist"
-
 wishlist_login = "emailer5k+wishlist@gmail.com"
 wishlist_password = "12345"
 
@@ -97,8 +100,6 @@ new_acc_register = '//*[@id="submitAccount"]'
 
 ## Add new address
 
-address_page = 'http://automationpractice.com/index.php?controller=addresses'
-
 address_email = "emailer5k+addnewaddress@gmail.com"
 address_pwd = "12345"
 
@@ -121,8 +122,6 @@ no_addresses = '//*[@id="center_column"]/p[2]'
 
 ## Add to basket test
 
-basket_product_page = "http://automationpractice.com/index.php?id_product=3&controller=product"
-
 basket_email = 'emailer5k+addtobasket@gmail.com'
 basket_password = '12345'
 
@@ -133,8 +132,6 @@ basket_add = '//*[@id="add_to_cart"]/button'
 basket_remove = '/html/body/div/div[2]/div/div[3]/div/div[2]/table/tbody/tr/td[7]/div/a'
 
 ## Checkout test
-
-order_history = "http://automationpractice.com/index.php?controller=history"
 
 add_to_cart = '//*[@id="homefeatured"]/li[1]/div/div[2]/div[2]/a[1]'
 go_to_login = '//*[@id="header"]/div[2]/div/div/nav/div[1]/a'

@@ -24,7 +24,6 @@ else:
 print("5: Go to product page")
 driver.get(wishlist_product)
 
-
 wishlist_name = driver.find_element_by_xpath(wishlist_prod_name).text
 print("6: Product that will be added to wishlist: "+wishlist_name+colored("\nAdding to wishlist", "blue"))
 

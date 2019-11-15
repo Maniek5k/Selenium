@@ -36,6 +36,18 @@ wishlist_my_acc = "http://automationpractice.com/index.php?fc=module&module=bloc
 order_history = "http://automationpractice.com/index.php?controller=history"
 basket_product_page = "http://automationpractice.com/index.php?id_product=3&controller=product"
 
+## Search
+
+search_term = "Blouse"
+search_404 = "qewwqeq"
+search_failed_alert_text = 'No results were found for your search "qewwqeq"'
+
+search_input = '//*[@id="search_query_top"]'
+search_submit = '//*[@id="searchbox"]/button'
+
+search_result_name = '//*[@id="center_column"]/ul/li/div/div[2]/h5/a'
+search_failed_alert = '//*[@id="center_column"]/p'
+
 ## Login
 
 login_email = "emailer5k+selenium@gmail.com"
@@ -56,7 +68,7 @@ recover_success = '//*[@id="center_column"]/div/p'
 recover_success_text = "A confirmation email has been sent to your address: emailer5k+selenium@gmail.com"
 
 ## Change password
-prefix_create = random.randint(0, 9999)
+prefix_create = random.randint(0, 999999)
 
 change_password_email = "emailer5k+pwdchange@gmail.com"
 new_password = str(prefix_create)

@@ -1,8 +1,8 @@
-from variables import *
+from testautomation.variables import *
 
 start_time = time.time()
 
-print(colored("TEST STARTED: Login & logout \nStart: Go to test website", "green", attrs=['bold']))
+print(colored("TEST STARTED: Change personal data \nStart: Go to test website", "green", attrs=['bold']))
 driver.get(website)
 
 print("1: Click login button")

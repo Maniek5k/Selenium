@@ -1,4 +1,4 @@
-from variables import *
+from testautomation.variables import *
 
 start_time = time.time()
 driver.implicitly_wait(2)

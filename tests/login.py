@@ -10,7 +10,7 @@ driver.find_element_by_xpath(login_btn).click()
 
 print("2: Fill login form with email and password")
 driver.find_element_by_xpath(login_mail).send_keys(login_email)
-driver.find_element_by_xpath(login_pwd).send_keys(login_password)
+driver.find_element_by_xpath(login_pwd).send_keys(default_password)
 
 print("3: Click submit button")
 driver.find_element_by_xpath(login_submit).click()

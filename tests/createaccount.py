@@ -24,7 +24,7 @@ print("6: Sending account owner last name")
 driver.find_element_by_xpath(new_acc_last_name).send_keys("Tester lastname")
 
 print("7: Sending account owner password")
-driver.find_element_by_xpath(new_acc_password).send_keys("12345")
+driver.find_element_by_xpath(new_acc_password).send_keys(default_password)
 
 print("8: Sending first name - address")
 driver.find_element_by_xpath(first_name).send_keys("Tester first")
@@ -70,7 +70,7 @@ driver.find_element_by_xpath(logout_btn).click()
 
 print("20: Checking correct data - logging into newly created account")
 driver.find_element_by_xpath(login_mail).send_keys(new_account_email)
-driver.find_element_by_xpath(login_pwd).send_keys(login_password)
+driver.find_element_by_xpath(login_pwd).send_keys(default_password)
 driver.find_element_by_xpath(login_submit).click()
 
 print(colored("CHECK: Checking correct logging in", "blue"))

@@ -13,7 +13,7 @@ driver.find_element_by_xpath(go_to_login).click()
 
 print("3: Providing login credentials and submitting form")
 driver.find_element_by_xpath(email).send_keys(login_email)
-driver.find_element_by_xpath(password).send_keys(login_password)
+driver.find_element_by_xpath(password).send_keys(default_password)
 driver.find_element_by_xpath(submit).click()
 
 print("4: Going to basket - checkout")

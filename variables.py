@@ -12,10 +12,23 @@ driver = webdriver.Chrome()
 
 driver.set_page_load_timeout(30)
 
+## Generate random string for names etc.
+
+import random
+import string
+
+def randomString(stringLength):
+    letters = string.ascii_letters
+    return ''.join(random.choice(letters) for i in range(stringLength))
+
+
 ## Pages
+
+default_password = "12345"
 
 website = "http://automationpractice.com/index.php"
 login_page = 'http://automationpractice.com/index.php?controller=authentication&back=my-account'
+change_password_logout_page = "http://automationpractice.com/index.php?controller=authentication&back=identity"
 account_page = 'http://automationpractice.com/index.php?controller=my-account'
 address_page = 'http://automationpractice.com/index.php?controller=addresses'
 wishlist_product = "http://automationpractice.com/index.php?id_product=2&controller=product"
@@ -26,7 +39,6 @@ basket_product_page = "http://automationpractice.com/index.php?id_product=3&cont
 ## Login
 
 login_email = "emailer5k+selenium@gmail.com"
-login_password = "12345"
 
 login_btn = '//*[@id="header"]/div[2]/div/div/nav/div[1]/a'
 login_mail = '//*[@id="email"]'
@@ -42,6 +54,30 @@ recover_confirm = '//*[@id="form_forgotpassword"]/fieldset/p/button'
 
 recover_success = '//*[@id="center_column"]/div/p'
 recover_success_text = "A confirmation email has been sent to your address: emailer5k+selenium@gmail.com"
+
+## Change password
+prefix_create = random.randint(0, 9999)
+
+change_password_email = "emailer5k+pwdchange@gmail.com"
+new_password = str(prefix_create)
+
+change_password_info = 'icon-user'
+change_password_current = '//*[@id="old_passwd"]'
+change_password_new = '//*[@id="passwd"]'
+change_password_confirm = '//*[@id="confirmation"]'
+change_password_save = 'submitIdentity'
+change_password_alert = '//*[@id="center_column"]/div/p'
+change_password_success_text = 'Your personal information has been successfully updated.'
+
+## Change personal informations
+
+change_info_email = "emailer5k+personalchange@gmail.com"
+
+change_info_name = '//*[@id="firstname"]'
+change_info_lastname = '//*[@id="lastname"]'
+
+test_name = randomString(6)
+test_lastname = randomString(7)
 
 ## Contact us form
 
@@ -59,7 +95,6 @@ contact_success_text = "Your message has been successfully sent to our team."
 
 ## Subscribe to newsletter
 
-prefix_create = random.randint(0, 9999)
 newsletter_mail = str(prefix_create) + '@testmail.com'
 
 newsletter_input = '#newsletter-input'
@@ -75,7 +110,6 @@ failed_message = "Newsletter : This email address is already registered."
 ## Add product to wishlist
 
 wishlist_login = "emailer5k+wishlist@gmail.com"
-wishlist_password = "12345"
 
 wishlist_prod_name = '//*[@id="center_column"]/div/div/div[3]/h1'
 wishlist_add = '//*[@id="wishlist_button"]'
@@ -101,7 +135,6 @@ new_acc_register = '//*[@id="submitAccount"]'
 ## Add new address
 
 address_email = "emailer5k+addnewaddress@gmail.com"
-address_pwd = "12345"
 
 add_new_address = '//*[@id="center_column"]/div/a'
 first_name = '//*[@id="firstname"]'
@@ -123,7 +156,6 @@ no_addresses = '//*[@id="center_column"]/p[2]'
 ## Add to basket test
 
 basket_email = 'emailer5k+addtobasket@gmail.com'
-basket_password = '12345'
 
 basket_name = '//*[@id="center_column"]/div/div/div[3]/h1'
 basket_added_product_name = '/html/body/div/div[2]/div/div[3]/div/div[2]/table/tbody/tr/td[2]/p/a'

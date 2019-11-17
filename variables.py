@@ -12,7 +12,7 @@ driver = webdriver.Chrome()
 
 driver.set_page_load_timeout(30)
 
-## Generate random string for names etc.
+## Generate random string, numbers for names etc.
 
 import random
 import string
@@ -21,6 +21,7 @@ def randomString(stringLength):
     letters = string.ascii_letters
     return ''.join(random.choice(letters) for i in range(stringLength))
 
+prefix_create = random.randint(0, 999999)
 
 ## Pages
 
@@ -68,7 +69,6 @@ recover_success = '//*[@id="center_column"]/div/p'
 recover_success_text = "A confirmation email has been sent to your address: emailer5k+selenium@gmail.com"
 
 ## Change password
-prefix_create = random.randint(0, 999999)
 
 change_password_email = "emailer5k+pwdchange@gmail.com"
 new_password = str(prefix_create)
@@ -87,8 +87,9 @@ change_info_email = "emailer5k+personalchange@gmail.com"
 
 change_info_name = '//*[@id="firstname"]'
 change_info_lastname = '//*[@id="lastname"]'
+change_back_button = '//*[@id="center_column"]/ul/li[1]/a'
 
-test_name = randomString(6)
+test_name = randomString(6).title()
 test_lastname = randomString(7)
 
 ## Contact us form

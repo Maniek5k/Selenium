@@ -1,8 +1,8 @@
-from testautomation.test_data import *
+from test_data import *
 
 start_time = time.time()
 
-print(colored("TEST STARTED: Checkout - pay by check\nStart: Go to test website", "green", attrs=['bold']))
+print(colored("TEST STARTED: Pay by check\nStart: Go to test website", "green", attrs=['bold']))
 driver.get(website)
 
 print("1: Going to login page")

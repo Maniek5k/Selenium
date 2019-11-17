@@ -2,7 +2,7 @@ from test_data import *
 
 start_time = time.time()
 
-print(colored("TEST STARTED: Recover a forgotten password \nStart: Go to test website", "green", attrs=['bold']))
+print(colored("TEST STARTED: Recover password \nStart: Go to website", "green", attrs=['bold']))
 driver.get(website)
 
 print("1: Go to login page - clicking button")

@@ -83,7 +83,7 @@ driver.find_element_by_xpath(logout_btn).click()
 
 print("20: Checking correct log-out")
 if driver.current_url != account_page:
-    print (colored("SUCCESS: Logout was successful", "blue"))
+    print(colored("SUCCESS: Logout was successful", "blue"))
     driver.close()
     print(colored("TEST FINISHED SUCCESSFULLY", "green", attrs=['bold']))
 else:

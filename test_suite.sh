@@ -17,8 +17,8 @@ python tests/addtowishlist.py &&
 python tests/createaccount.py &&
 python tests/addnewaddress.py &&
 python tests/addtobasket.py &&
-# python tests/checkout-wire.py &&
-# python tests/checkout-check.py
+# python tests/checkoutwire.py &&
+# python tests/checkoutcheck.py
 
 end=$(date +%s)
 

@@ -2,7 +2,7 @@ from test_data import *
 
 start_time = time.time()
 
-print(colored("TEST STARTED: Subscribe to newsletter \nStart: Go to test website", "green", attrs=['bold']))
+print(colored("TEST STARTED: Subscribe to newsletter \nStart: Go to website", "green", attrs=['bold']))
 driver.get(website)
 
 print("1: Sending new email to newsletter subscribe")

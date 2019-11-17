@@ -2,7 +2,7 @@ from test_data import *
 
 start_time = time.time()
 driver.implicitly_wait(2)
-print(colored("TEST STARTED: Create new account \nStart: Go to test website", "green", attrs=['bold']))
+print(colored("TEST STARTED: Create new account \nStart: Go to website", "green", attrs=['bold']))
 driver.get(website)
 
 print("1: Click sign in button")

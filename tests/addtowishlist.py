@@ -2,7 +2,7 @@ from test_data import *
 
 start_time = time.time()
 
-print(colored("TEST STARTED: Adding product to wishlist \nStart: Go to test website", "green", attrs=['bold']))
+print(colored("TEST STARTED: Adding to wishlist \nStart: Go to website", "green", attrs=['bold']))
 driver.get(website)
 
 print("1: Click login button")
@@ -25,7 +25,7 @@ print("5: Go to product page")
 driver.get(wishlist_product)
 
 wishlist_name = driver.find_element_by_xpath(wishlist_prod_name).text
-print("6: Product that will be added to wishlist: "+wishlist_name+colored("\nAdding to wishlist", "blue"))
+print("6: Wishlist product: "+wishlist_name+colored("\nAdding to wishlist", "blue"))
 
 driver.find_element_by_xpath(wishlist_add).click()
 

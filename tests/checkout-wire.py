@@ -1,4 +1,4 @@
-from testautomation.variables import *
+from testautomation.test_data import *
 
 start_time = time.time()
 

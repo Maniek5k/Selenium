@@ -23,4 +23,4 @@ At current state following tests are available:
 - Checkout -> Pay By Check
 
 All can be run locally via. test_suite.sh -> it runs all tests in consecutive order, after one is finished then next is ran.
-Checkout tests aren't included at current state of Test Suite, as I don't want to spam my test site with orders.
+Checkout tests aren't included at current state of Test Suite, as I don't want to spam test site with orders.

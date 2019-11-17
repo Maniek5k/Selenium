@@ -71,17 +71,17 @@ print("18: Deleting added address from address book")
 driver.find_element_by_xpath(address_delete).click()
 driver.switch_to.alert.accept()
 
-print("19: Checking if address was successfully deleted")
+print("CHECK: Checking if address was successfully deleted")
 address_removed = driver.find_element_by_xpath(no_addresses)
 if address_removed.is_displayed():
-    print(colored("19a: Address was removed", "blue"))
+    print(colored("SUCCESS: Address was removed successfully", "blue"))
 else:
     print("ERROR - Address not removed properly")
 
-print("20: Logging out")
+print("19: Logging out")
 driver.find_element_by_xpath(logout_btn).click()
 
-print("21: Checking correct log-out")
+print("20: Checking correct log-out")
 if driver.current_url != account_page:
     print (colored("SUCCESS: Logout was successful", "blue"))
     driver.close()

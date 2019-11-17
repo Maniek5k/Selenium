@@ -30,6 +30,7 @@ default_password = "12345"
 website = "http://automationpractice.com/index.php"
 login_page = 'http://automationpractice.com/index.php?controller=authentication&back=my-account'
 change_password_logout_page = "http://automationpractice.com/index.php?controller=authentication&back=identity"
+order_logout_page = "http://automationpractice.com/index.php?controller=authentication&back=history"
 account_page = 'http://automationpractice.com/index.php?controller=my-account'
 address_page = 'http://automationpractice.com/index.php?controller=addresses'
 wishlist_product = "http://automationpractice.com/index.php?id_product=2&controller=product"
@@ -178,7 +179,7 @@ basket_remove = '/html/body/div/div[2]/div/div[3]/div/div[2]/table/tbody/tr/td[7
 
 ## Checkout test
 
-add_to_cart = '//*[@id="homefeatured"]/li[1]/div/div[2]/div[2]/a[1]'
+add_to_cart = '//*[@id="add_to_cart"]/button'
 go_to_login = '//*[@id="header"]/div[2]/div/div/nav/div[1]/a'
 go_to_checkout = '//*[@id="header"]/div[3]/div/div/div[3]/div/a'
 email = '//*[@id="email"]'
@@ -192,3 +193,6 @@ pay_by_wire = '//*[@id="HOOK_PAYMENT"]/div[1]/div/p/a'
 pay_by_check = '//*[@id="HOOK_PAYMENT"]/div[2]/div/p/a'
 place_order = '//*[@id="cart_navigation"]/button'
 order_confirmation = '//*[@id="center_column"]/p/a'
+order_unfold = '//*[@id="order-list"]/tbody/tr[1]/td[1]/a'
+product_page_sku = '//*[@id="product_reference"]/span'
+ordered_sku = '//*[@id="order-detail-content"]/table/tbody/tr/td[1]/label'

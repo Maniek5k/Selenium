@@ -57,9 +57,6 @@ print("CHECK: Checking if provided informations were saved correctly in my accou
 check_name = driver.find_element_by_xpath(change_info_name).get_attribute('value')
 check_lastname = driver.find_element_by_xpath(change_info_lastname).get_attribute('value')
 
-print(check_name, check_lastname)
-print(test_name, test_lastname)
-
 if check_name == test_name and check_lastname == test_lastname:
     print(colored("SUCCESS: Customer data change was successful", "blue"))
     print("12: Logging out")
